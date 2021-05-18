@@ -1,0 +1,20 @@
+<div class="container">
+
+<div  class="row">
+
+<div class="col-sm-4 " *ngFor="let items of showProducts" style ="padding:30px;" >
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{items.get_thumbnail}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{items.Name}}</h5>
+    <p class="card-text"><i>Price {{items.price | currency: 'INR'}}</i></p>
+    <a routerLink="/api/v1/products{{items.get_absolute_url}}"><button type="button" class="btn btn-dark ">View Description</button></a>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+
+</div>

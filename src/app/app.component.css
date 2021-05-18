@@ -1,0 +1,13 @@
+.cartCount{
+    color: white;
+    
+    text-align: center;
+    background-color: red;
+    border-radius: 50%;
+    width:15px;
+    margin-left: 1px;
+    margin-bottom: 19px;
+    bottom: 10px;
+    position: absolute;
+}
+

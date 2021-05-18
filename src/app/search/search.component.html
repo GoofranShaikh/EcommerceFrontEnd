@@ -1,0 +1,17 @@
+<div class="container">
+
+<div  class="row md-4">
+
+<div class="col-4 " *ngFor="let items of searchFound" style ="padding:30px;" >
+
+
+
+<img src ="{{items.get_thumbnail}}"> 
+<h4>{{items.name}}</h4>
+<p>Price {{items.price}} Rs</p>
+
+<a routerLink="/api/v1/products{{items.get_absolute_url}}"><button type="button" class="btn btn-dark">View Description</button></a>
+</div>
+
+</div>
+</div>

@@ -1,0 +1,33 @@
+
+<div class="container">
+<div class ="row">
+<div class="col-6 "><img src={{productDescription.get_image}} style="width: 60%;"  *ngIf="productDescription" />
+<div   *ngIf="productDescription" ><h4 class="col-md-4">{{productDescription.name}}<br> {{productDescription.price | currency:'INR'}} </h4>  
+ </div>
+ </div> 
+<div class= "col-sm-6 " >
+
+<h3 class="hardCode">Description:</h3><p class='sm-4' *ngIf="productDescription" >{{productDescription.description}}</p><hr>
+<span >
+
+<button style="margin:10px;"  type=button  class=" btn btn-dark  hardCode" (click)='AddtoCart(productDescription)' >Add to Cart
+</button>
+</span>
+
+
+ <button type=button  class="btn btn-dark hardCode" >Buy Now</button>
+ 
+ <hr>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+</div>
