@@ -1,3 +1,6 @@
+
+
+
 .cartCount{
     color: white;
     
@@ -6,8 +9,14 @@
     border-radius: 50%;
     width:15px;
     margin-left: 1px;
-    margin-bottom: 19px;
+    margin-bottom: 24px;
     bottom: 10px;
     position: absolute;
 }
 
+.searchBox{
+    width:250px;
+}
+.btn-dark:hover{
+background-color:blue;
+}
