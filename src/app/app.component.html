@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top " >
-<div class="container-fluid">
+<div class="container-fluid ">
   <a class="navbar-brand" href="#">Gstore</a>
   
 
@@ -30,8 +30,8 @@
 
 </form>
 </ul>
-<button class ="btn btn-dark " type="button" data-bs-toggle="modal" data-bs-target="#SignUpForm" >SignUp</button> 
-<button class ="btn btn-dark " type="button" >LogIn</button>
+<button routerLink='api/v1/register' class ="btn btn-dark " type="button"   >SignUp</button> 
+<button routerLink='api/v1/login' class ="btn btn-dark " type="button"   >LogIn</button>
 <a class="p-2 mb-2 " routerLink='/api/v1/yourCart'  style="color:white" ><i class="fa fa-shopping-cart"><span class='cartCount'>{{ displayCartCount}}</span></i> </a>
 
 
@@ -42,42 +42,8 @@
 </nav>
 
 
-<div class=" modal  container  col-mb-4" tabindex="-1" id="SignUpForm">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form class="row g-3 ">
-         <div class="col-md-6">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter Name">
-    </div>
-
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
 
 
-    <div class="form-group">
-      <label for="MobileNo">Mobile Number</label>
-      <input type="email" class="form-control" id="MobileNo" aria-describedby="MobileNo" placeholder=" eg: 956785123">
-      
-    </div>
-  </div>
-  </form>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
 <router-outlet >
 

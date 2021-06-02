@@ -3,6 +3,9 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AddToCart } from './add-to-cart';
 import { CommonService } from './common.service';
+import {UserAccountService} from './user-account.service';
+
+
   
 
 @Component({
@@ -11,14 +14,20 @@ import { CommonService } from './common.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- constructor(private service: CommonService,private router:Router){}
+ constructor(private service: CommonService,private userService: UserAccountService, private router:Router){}
   title = 'gstoreFend';
   category: any=[]
+
 
  
   displayCartCount:number=0
  
 ngOnInit(){
+
+
+
+
+
  this.service.getCategoryDropDown().subscribe(data=>{
    this.category=data
    console.log(this.category)
@@ -57,6 +66,9 @@ setTimeout(() => {
     
   
 }
+
+
+
 
 
 }

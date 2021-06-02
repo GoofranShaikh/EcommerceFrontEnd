@@ -56,7 +56,7 @@ export class CommonService {
     if(cart !==null){
       cartData=JSON.parse(cart);
     }
-    console.log(cartContent.isBoolean)
+    //console.log(cartContent.isBoolean)
     var exist=this.productExisist(cartData,cartContent,cart)
    
 if(exist==false|| exist==undefined){

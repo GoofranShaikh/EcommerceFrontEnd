@@ -2,7 +2,7 @@
 <div *ngIf='categoryPage.length!=0;else noProductsFound'>
 <div  class="row">
 
-<div class="col-sm-4 " *ngFor="let items of categoryPage" style ="padding:30px;" >
+<div class="col-md-6 " *ngFor="let items of categoryPage" style ="padding:30px;" >
 <div class="card" style="width: 18rem;" >
   <img class="card-img-top" src="{{items.get_thumbnail}}" alt="Card image cap">
   <div class="card-body">

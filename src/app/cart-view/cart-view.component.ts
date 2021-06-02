@@ -91,7 +91,7 @@ quantity(id:any,qty:any){      //execute this function whenever user increases o
     var removeItem:AddToCart[]=[]
     var popIndex
       console.log(removeItemID)
-      console.log( removeItem=this.cartItem.filter((e:AddToCart)=>e.id===removeItemID))
+      console.log( removeItem=this.cartItem.filter((e:AddToCart)=>e.id===removeItemID))   //check if the id in cartiems is equal to passed id from delete
       this.cartItem.forEach((content:AddToCart)=>{
         if(content.id==removeItemID){
           console.log(popIndex=this.cartItem.indexOf(content))
