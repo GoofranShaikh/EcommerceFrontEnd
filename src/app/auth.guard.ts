@@ -14,7 +14,7 @@ canActivate():boolean{
     return true
   }
   else{
-    this._router.navigate(['login/'])
+    this._router.navigate(['http://localhost:4200/api/v1/login'])
 
     return false
   }
