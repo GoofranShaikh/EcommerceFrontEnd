@@ -30,8 +30,10 @@
 
 </form>
 </ul>
-<button routerLink='api/v1/register' class ="btn btn-dark " type="button"   >SignUp</button> 
-<button routerLink='api/v1/login' class ="btn btn-dark " type="button"   >LogIn</button>
+<button  *ngIf='!userService.loggedIn()' routerLink='api/v1/register' class ="btn btn-dark " type="button"   >SignUp</button> 
+<button  *ngIf='!userService.loggedIn()' routerLink='api/v1/login' class ="btn btn-dark " type="button"   >LogIn</button>
+
+<button  *ngIf='userService.loggedIn()' routerLink='api/v1/login' class ="btn btn-dark " type="button" (click)='userService.logOut()'  >LogOut</button>
 <a class="p-2 mb-2 " routerLink='/api/v1/yourCart'  style="color:white" ><i class="fa fa-shopping-cart"><span class='cartCount'>{{ displayCartCount}}</span></i> </a>
 
 

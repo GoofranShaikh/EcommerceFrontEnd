@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject,BehaviorSubject } from 'rxjs';
-import { HttpClient } from '@angular/common/http';  
+import { HttpClient,HttpHeaders } from '@angular/common/http';  
 import { AddToCart} from 'src/app/add-to-cart'
+export const InterceptorSkip = 'X-Skip-Interceptor';
+
 import { NONE_TYPE } from '@angular/compiler';
 
 

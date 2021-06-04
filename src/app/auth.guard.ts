@@ -11,11 +11,12 @@ constructor(private _authService:UserAccountService,private _router:Router){}
 canActivate():boolean{
  
   if (this._authService.loggedIn()){
+    
     return true
   }
   else{
-    this._router.navigate(['http://localhost:4200/api/v1/login'])
-
+    this._router.navigate(['api/v1/login'])
+   
     return false
   }
 }

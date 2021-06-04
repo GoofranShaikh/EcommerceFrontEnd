@@ -14,7 +14,7 @@ import {UserAccountService} from './user-account.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- constructor(private service: CommonService,private userService: UserAccountService, private router:Router){}
+ constructor(private service: CommonService,public userService: UserAccountService, private router:Router){}
   title = 'gstoreFend';
   category: any=[]
 

@@ -14,7 +14,7 @@ import {UserAccountService} from './user-account.service';
 import { CustomerRegistrationComponent } from './customer-registration/customer-registration.component';
 import { CustomerLoginComponent } from './customer-login/customer-login.component';
 import {AuthGuard} from './auth.guard'
-import {TokenInterceptorService} from 'src/app/token-interceptor.service'
+import {authIntercepter} from 'src/app/auth-intercepter'
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import {TokenInterceptorService} from 'src/app/token-interceptor.service'
   providers: [CommonService, AuthGuard,UserAccountService,
   {
     provide:HTTP_INTERCEPTORS,
-    useClass:TokenInterceptorService,
+    useClass:authIntercepter,
     multi:true
   }],
   bootstrap: [AppComponent]
